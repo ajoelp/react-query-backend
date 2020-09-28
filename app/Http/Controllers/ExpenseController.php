@@ -44,7 +44,7 @@ class ExpenseController extends Controller
 
     public function destroy(Expense $expense): JsonResponse
     {
-        $expense->query()->delete();
+        $expense->delete();
 
         return new JsonResponse(null, JsonResponse::HTTP_NO_CONTENT);
     }
