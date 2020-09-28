@@ -1,0 +1,25 @@
+docker_command() {
+    eval "docker-compose ${@}"
+}
+
+composer() {
+    docker_command exec php-fpm composer ${@}
+}
+
+artisan() {
+    docker_command exec php-fpm php artisan ${@}
+}
+
+up() {
+    docker_command up
+}
+
+down() {
+    docker_command up
+}
+
+fresh(){
+    artisan migrate:fresh --seed
+}
+
+${@}
