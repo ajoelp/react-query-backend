@@ -22,7 +22,7 @@ class ExpenseFactory extends Factory
     public function definition()
     {
         return [
-            'amount' => $this->faker->numberBetween(-200000, 200000),
+            'amount' => $this->faker->numberBetween(1000, 200000),
             'name' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
         ];

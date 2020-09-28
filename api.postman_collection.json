@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "601a0d21-60e5-4ab0-9a39-2bb55335db04",
+		"name": "Untitled Paw Document",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Expenses",
+			"protocolProfileBehavior": {
+				"followRedirects": false,
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accepts",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/expenses",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Search",
+			"protocolProfileBehavior": {
+				"followRedirects": false,
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accepts",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/expenses?search=lo",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"expenses"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "lo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Expense",
+			"protocolProfileBehavior": {
+				"followRedirects": false,
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accepts",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/expenses/1",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"expenses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Expense",
+			"protocolProfileBehavior": {
+				"followRedirects": false,
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accepts",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"new-expense-name\",\"description\":\"new-expense-description\",\"amount\":500}"
+				},
+				"url": {
+					"raw": "{{url}}api/expenses",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Expense",
+			"protocolProfileBehavior": {
+				"followRedirects": false,
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accepts",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"updated name\",\"amount\":50000}"
+				},
+				"url": {
+					"raw": "{{url}}api/expenses/4",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"expenses",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Expense",
+			"protocolProfileBehavior": {
+				"followRedirects": false,
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accepts",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/expenses/1",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"expenses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports",
+			"protocolProfileBehavior": {
+				"followRedirects": false,
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/reports",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"reports"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
